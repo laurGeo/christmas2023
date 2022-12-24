@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<title>XBox Code Verification</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<style>
+    .blink {
+        animation: blinker 0.6s linear infinite;
+
+      }
+      @keyframes blinker {
+        50% {
+          opacity: 0;
+        }
+      }
+     
+      
+body,h1 {font-family: 'Press Start 2P', cursive; color: greenyellow;}
+body, html {height: 100%}
+.bgimg {
+  background-color: black;
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+</style>
+<body>
+
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+  <div class="w3-display-topleft w3-padding-large w3-xlarge">
+    
+  </div>
+  <div class="w3-display-middle">
+    <h1 class="w3-jumbo w3-animate-top">Happy Christmas Lads:</h1>
+    <hr class="w3-border-grey" style="margin:auto;width:30%">
+    <p class="w3-large w3-center blink">Time is ticking..</p>
+     <form id="frm1" action="index.html">
+        <input type="text" id="code" name="code">
+        <input type="button" onclick="myFunction()" value="Submit">
+      </form>
+      <p class="w3-large w3-center" id="answer"></p>
+  </div>
+ 
+  <div class="w3-display-bottomleft w3-padding-large">
+    Lauren Geoghegan 2021
+  </div>
+</div>
+<script>
+    function myFunction() {
+      var a =document.getElementById("code");
+
+      if(a.value == "646DYMPDXWWG6HVT6HCQ34VCZ"){
+          document.getElementById('answer').innerHTML= 'Correct, code is: ' + a.value + 'this is a €25 Xbox voucher!!';
+      }else{
+        document.getElementById('answer').innerHTML= 'Incorrect, try to resubmit a new code';
+      }
+     
+    }
+    </script>
+</body>
+</html>
